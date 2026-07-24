@@ -115,7 +115,7 @@ p {
 h1 {
   max-width: 760px;
   margin-bottom: 20px;
-  font-size: clamp(46px, 6vw, 84px);
+  font-size: 76px;
   line-height: 0.98;
   letter-spacing: 0;
   color: var(--navy);
@@ -123,7 +123,7 @@ h1 {
 
 h2 {
   margin-bottom: 18px;
-  font-size: clamp(30px, 4vw, 56px);
+  font-size: 48px;
   line-height: 1.04;
   letter-spacing: 0;
   color: var(--navy);
@@ -139,8 +139,12 @@ h3 {
 .lead {
   max-width: 720px;
   color: #425466;
-  font-size: clamp(18px, 2vw, 23px);
+  font-size: 22px;
   line-height: 1.48;
+}
+
+.lead strong {
+  color: var(--teal);
 }
 
 .hero-actions,
@@ -149,9 +153,28 @@ h3 {
 .scope-grid,
 .timeline,
 .evidence,
-.status-grid {
+.status-grid,
+.keyword-strip {
   display: grid;
   gap: 16px;
+}
+
+.keyword-strip {
+  grid-template-columns: repeat(4, max-content);
+  margin-top: 24px;
+}
+
+.keyword-strip span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid #b8d6d9;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 850;
 }
 
 .hero-actions {
@@ -207,6 +230,28 @@ h3 {
   background: rgba(12, 29, 42, 0.88);
   color: #fff;
   backdrop-filter: blur(18px);
+}
+
+.signal-stack {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.signal-stack span {
+  display: inline-flex;
+  width: max-content;
+  min-height: 34px;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 850;
+  box-shadow: 0 12px 30px rgba(18, 48, 71, 0.16);
 }
 
 .panel-head,
@@ -288,6 +333,186 @@ figcaption {
   margin-top: 12px;
   color: var(--muted);
   font-size: 14px;
+}
+
+.sales-scroll {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.95fr) minmax(420px, 1.05fr);
+  gap: clamp(28px, 5vw, 72px);
+  padding: clamp(54px, 8vw, 96px) clamp(18px, 4vw, 52px);
+  background: #101828;
+  color: #fff;
+}
+
+.sales-sticky {
+  position: sticky;
+  top: 92px;
+  align-self: start;
+  min-height: calc(100vh - 120px);
+  display: grid;
+  align-content: center;
+  gap: 26px;
+}
+
+.sales-head {
+  max-width: 720px;
+}
+
+.sales-head h2,
+.sales-head .eyebrow {
+  color: #fff;
+}
+
+.sales-head p:last-child {
+  color: #c8d7e0;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.sales-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 18px;
+}
+
+.progress-rail {
+  position: relative;
+  width: 6px;
+  min-height: 100%;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.progress-rail span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 20%;
+  border-radius: inherit;
+  background: linear-gradient(180deg, #78f0c4, #36b6d6);
+  transition: height 280ms ease;
+}
+
+.sales-card {
+  min-height: 280px;
+  padding: clamp(22px, 4vw, 34px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+}
+
+.sales-card small {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: #78f0c4;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.sales-card h3 {
+  max-width: 760px;
+  color: #fff;
+  font-size: 32px;
+  line-height: 1.08;
+}
+
+.sales-card p {
+  max-width: 720px;
+  color: #d0d8e0;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.sales-card strong {
+  display: inline-flex;
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(120, 240, 196, 0.12);
+  color: #78f0c4;
+}
+
+.sales-metrics {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.sales-metrics div {
+  min-height: 112px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.sales-metrics span {
+  display: block;
+  margin-bottom: 16px;
+  color: #36b6d6;
+  font-weight: 900;
+}
+
+.sales-metrics strong {
+  color: #fff;
+  line-height: 1.22;
+}
+
+.sales-steps {
+  display: grid;
+  gap: 18px;
+  padding: 24vh 0;
+}
+
+.sales-step {
+  min-height: 54vh;
+  display: grid;
+  align-content: center;
+  padding: clamp(22px, 4vw, 36px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  opacity: 0.58;
+  transform: translateY(10px);
+  transition: opacity 240ms ease, transform 240ms ease, background 240ms ease;
+}
+
+.sales-step.active {
+  background: rgba(255, 255, 255, 0.12);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sales-step span {
+  display: inline-flex;
+  width: max-content;
+  margin-bottom: 16px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.sales-step h3 {
+  max-width: 720px;
+  color: #fff;
+  font-size: 34px;
+  line-height: 1.08;
+}
+
+.sales-step p {
+  max-width: 680px;
+  color: #c8d7e0;
+  font-size: 18px;
+  line-height: 1.55;
 }
 
 .section-heading {
@@ -521,13 +746,26 @@ figcaption {
   .intro,
   .system-grid,
   .investment,
-  .assumptions {
+  .assumptions,
+  .sales-scroll {
     grid-template-columns: 1fr;
   }
 
   .hero {
     min-height: auto;
     padding-top: 46px;
+  }
+
+  h1 {
+    font-size: 58px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .lead {
+    font-size: 20px;
   }
 
   .hero-visual,
@@ -537,8 +775,27 @@ figcaption {
   }
 
   .evidence,
-  .payment-plan {
+  .payment-plan,
+  .keyword-strip {
     grid-template-columns: 1fr;
+  }
+
+  .keyword-strip span {
+    width: 100%;
+  }
+
+  .sales-sticky {
+    position: relative;
+    top: auto;
+    min-height: auto;
+  }
+
+  .sales-steps {
+    padding: 0;
+  }
+
+  .sales-step {
+    min-height: auto;
   }
 
   figure img {
@@ -559,11 +816,16 @@ figcaption {
     font-size: 31px;
   }
 
+  .lead {
+    font-size: 18px;
+  }
+
   .hero-actions,
   .scope-grid,
   .timeline,
   .support-grid,
-  .status-grid {
+  .status-grid,
+  .sales-metrics {
     grid-template-columns: 1fr;
   }
 
@@ -584,6 +846,11 @@ figcaption {
     border-radius: 0;
   }
 
+  .signal-stack {
+    left: 12px;
+    top: 12px;
+  }
+
   .hero-visual {
     display: flex;
     flex-direction: column;
@@ -594,5 +861,14 @@ figcaption {
   .support-grid article,
   .payment-plan article {
     min-height: auto;
+  }
+
+  .sales-scroll {
+    padding: 46px 16px;
+  }
+
+  .sales-card h3,
+  .sales-step h3 {
+    font-size: 26px;
   }
 }
