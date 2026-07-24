@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Propuesta SolversAI para Parkcol Smart Control, sistema a la medida para automatizar parqueadero, camaras, pagos, caja y clientes fijos." />
+    <title>Propuesta Parkcol Smart Control | SolversAI</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark">S</span>
+        <span>SolversAI</span>
+      </a>
+      <nav aria-label="Secciones">
+        <a href="#sistema">Sistema</a>
+        <a href="#alcance">Alcance</a>
+        <a href="#inversion">Inversión</a>
+        <a href="#soporte">Soporte</a>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow">Propuesta privada para Parkcol</p>
+          <h1>Parkcol Smart Control</h1>
+          <p class="lead">Un sistema operativo a la medida para unir la operación del parqueadero: cámaras, placas, talanquera, pagos digitales, caja, contabilidad, cartera y clientes fijos en una sola plataforma.</p>
+          <div class="hero-actions">
+            <a class="primary" href="#inversion">Ver inversión</a>
+            <a class="secondary" href="#alcance">Ver alcance</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Vista conceptual del sistema Parkcol Smart Control">
+          <img src="/assets/parkcol-camera.jpg" alt="Cámara instalada en Parkcol" />
+          <div class="control-panel">
+            <div class="panel-head">
+              <span>Centro Parkcol</span>
+              <strong>En vivo</strong>
+            </div>
+            <div class="plate-row">
+              <span>Placa leída</span>
+              <strong>KXL70E</strong>
+            </div>
+            <div class="status-grid">
+              <div><span>Pago</span><strong>Aprobado</strong></div>
+              <div><span>Salida</span><strong>Autorizada</strong></div>
+              <div><span>Turno</span><strong>02</strong></div>
+              <div><span>Cámaras</span><strong>10</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro">
+        <div>
+          <p class="eyebrow">Diagnóstico</p>
+          <h2>La oportunidad no es instalar otra pantalla. Es unir lo que hoy está separado.</h2>
+        </div>
+        <p>Parkcol ya tiene piezas importantes: SysconPark, Ceparking, cámaras Hikvision/Dahua, reconocimiento de placas, recibos con QR, caja por turnos, clientes, convenios y reportes. La propuesta de SolversAI es construir una capa propia que conecte esas piezas, reduzca procesos manuales y deje la operación visible desde una sola plataforma.</p>
+      </section>
+
+      <section class="evidence section">
+        <figure>
+          <img src="/assets/parkcol-syscon-clients.jpg" alt="Pantalla actual de clientes y facturación en Parkcol" />
+          <figcaption>Operación actual con clientes, facturación, ocupación y recibos.</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/parkcol-syscon-menu.jpg" alt="Pantalla actual con módulos administrativos en Parkcol" />
+          <figcaption>Módulos administrativos, tarifas, caja, reimpresión y reportes.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section system" id="sistema">
+        <div class="section-heading">
+          <p class="eyebrow">Sistema propuesto</p>
+          <h2>Una plataforma única para operar, cobrar, controlar y auditar Parkcol.</h2>
+        </div>
+        <div class="system-grid">
+          <div class="module-menu" aria-label="Módulos principales">
+            <button data-module="placas" type="button">Placas y talanquera</button>
+            <button data-module="pagos" type="button">Pagos digitales</button>
+            <button data-module="caja" type="button">Caja y contabilidad</button>
+            <button data-module="clientes" type="button">Clientes fijos</button>
+          </div>
+          <article class="module-detail">
+            <h3 data-detail-title></h3>
+            <p data-detail-body></p>
+            <ul data-detail-list></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="alcance">
+        <div class="section-heading">
+          <p class="eyebrow">Alcance incluido</p>
+          <h2>Qué tendría el sistema a la medida.</h2>
+        </div>
+        <div class="scope-grid">
+          <article>
+            <span>01</span>
+            <h3>Centro de control operativo</h3>
+            <p>Dashboard de ocupación, carros, motos, pagos pendientes, recaudo del día, estado de cámaras, alertas y turno activo.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Lectura de placas</h3>
+            <p>Integración con cámaras compatibles, motor ALPR/OCR o capa de reconocimiento disponible, evidencia visual y confirmación manual cuando aplique.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Talanquera y salida</h3>
+            <p>Validación de pago, mensualidad activa o convenio antes de autorizar salida. La conexión final depende del controlador/API compatible.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Canal de pago digital</h3>
+            <p>QR o link por placa/ticket, estado de pago, conciliación y soporte para integrar pasarela aprobada por Parkcol.</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>Caja por turnos</h3>
+            <p>Turno 01, 02 y 03 con recaudo por servicio, efectivo vs digital, cierres, comprobantes, anulaciones y diferencias.</p>
+          </article>
+          <article>
+            <span>06</span>
+            <h3>Cartera y contabilidad</h3>
+            <p>Ingresos, egresos, clientes pendientes, pagos mensuales, historial, reportes exportables y trazabilidad para administración.</p>
+          </article>
+          <article>
+            <span>07</span>
+            <h3>Mensualidades y clientes fijos</h3>
+            <p>Clientes, convenios, vencimientos, consecutivo de pagos, dos placas por mensualidad y regla de una placa activa dentro.</p>
+          </article>
+          <article>
+            <span>08</span>
+            <h3>Servicios reales Parkcol</h3>
+            <p>Visitantes por hora, moto, carro, amanecida, valet parking, convenios, pico y placa, tarifas y excepciones configurables.</p>
+          </article>
+          <article>
+            <span>09</span>
+            <h3>Vista móvil del dueño</h3>
+            <p>Consulta desde celular de ingresos, egresos, cierres, ocupación, alertas, pagos digitales, caja y mensualidades.</p>
+          </article>
+          <article>
+            <span>10</span>
+            <h3>Usuarios y auditoría</h3>
+            <p>Roles para cajero, administrador y dueño, bitácora de acciones, cambios de tarifas, anulaciones y registros sensibles.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section process">
+        <div class="section-heading">
+          <p class="eyebrow">Implementación</p>
+          <h2>Ruta de trabajo para construirlo bien.</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <strong>1. Levantamiento técnico</strong>
+            <p>Revisión de cámaras, red, talanquera, SysconPark, Ceparking, reportes, operación de caja y reglas internas.</p>
+          </article>
+          <article>
+            <strong>2. Diseño del sistema</strong>
+            <p>Mapa de módulos, base de datos, roles, flujos de ingreso, pago, salida, cierres, cartera y mensualidades.</p>
+          </article>
+          <article>
+            <strong>3. Desarrollo e integraciones</strong>
+            <p>Construcción del panel, APIs internas, pagos, validación de placas, reportes y conexión con hardware compatible.</p>
+          </article>
+          <article>
+            <strong>4. Pruebas y entrega</strong>
+            <p>Pruebas en operación real, ajustes de flujo, capacitación, documentación y salida controlada a producción.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section investment" id="inversion">
+        <div>
+          <p class="eyebrow">Inversión del proyecto</p>
+          <h2>$19.850.000 COP</h2>
+          <p>Desarrollo del sistema a la medida Parkcol Smart Control, incluyendo diseño funcional, implementación, pruebas, entrega y capacitación inicial.</p>
+        </div>
+        <div class="payment-plan">
+          <article>
+            <span>50%</span>
+            <strong>$9.925.000</strong>
+            <p>Pago inicial para iniciar levantamiento, diseño técnico y desarrollo.</p>
+          </article>
+          <article>
+            <span>25%</span>
+            <strong>$4.962.500</strong>
+            <p>Pago antes de la etapa final, al tener el sistema avanzado y listo para cierre de integraciones.</p>
+          </article>
+          <article>
+            <span>25%</span>
+            <strong>$4.962.500</strong>
+            <p>Pago contra entrega final del sistema implementado, probado y socializado.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section support" id="soporte">
+        <div class="section-heading">
+          <p class="eyebrow">Fee mensual operativo</p>
+          <h2>$5.000.000 COP mensuales</h2>
+          <p>Se activa un mes después de la entrega total del sistema. Este fee mantiene la plataforma funcional, monitoreada y acompañada.</p>
+        </div>
+        <div class="support-grid">
+          <article>
+            <h3>Infraestructura y estabilidad</h3>
+            <p>Servidor, monitoreo básico, respaldos, revisión de disponibilidad, actualizaciones técnicas y cuidado de base de datos.</p>
+          </article>
+          <article>
+            <h3>Soporte operativo</h3>
+            <p>Acompañamiento para incidencias, validación de pagos, cámaras, flujos de caja, usuarios, reportes y dudas del equipo.</p>
+          </article>
+          <article>
+            <h3>Mantenimiento evolutivo menor</h3>
+            <p>Ajustes pequeños sobre módulos existentes, mejoras de usabilidad, cambios de textos, tarifas y reportes operativos.</p>
+          </article>
+          <article>
+            <h3>Control continuo</h3>
+            <p>Revisión de logs, alertas, conciliación del canal digital y seguimiento para que el sistema siga alineado con la operación.</p>
+          </article>
+        </div>
+        <p class="note">No incluye compra de cámaras, talanquera, sensores, licencias externas, comisiones de pasarela, mensajes transaccionales ni módulos nuevos fuera del alcance acordado.</p>
+      </section>
+
+      <section class="section assumptions">
+        <div>
+          <p class="eyebrow">Condiciones técnicas</p>
+          <h2>Para integrar correctamente, Parkcol debe habilitar acceso técnico controlado.</h2>
+        </div>
+        <ul>
+          <li>Acceso a cámaras o flujos RTSP/ONVIF/API disponibles.</li>
+          <li>Validación del controlador de talanquera o instalación de controlador compatible.</li>
+          <li>Acceso a datos, reportes, exportaciones o APIs disponibles de SysconPark/Ceparking.</li>
+          <li>Cuenta activa de pasarela de pagos y datos legales requeridos por el proveedor.</li>
+          <li>Red estable en ingreso, salida, caja y punto de operación.</li>
+        </ul>
+      </section>
+
+      <section class="section closing">
+        <p class="eyebrow">Cierre</p>
+        <h2>Parkcol no necesita operar con más pantallas separadas. Necesita un sistema propio que conecte su parqueadero completo.</h2>
+        <p>La propuesta de SolversAI es construir ese centro de control: menos digitación manual, más trazabilidad, más automatización, mejor experiencia de pago y una administración con información clara para decidir.</p>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
