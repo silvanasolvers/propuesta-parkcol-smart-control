@@ -11,6 +11,8 @@ const salesMetricOne = document.querySelector('[data-scroll-metric-one]');
 const salesMetricTwo = document.querySelector('[data-scroll-metric-two]');
 const salesMetricThree = document.querySelector('[data-scroll-metric-three]');
 const salesProgress = document.querySelector('[data-scroll-progress]');
+const salesKeyword = document.querySelector('[data-scroll-keyword]');
+const salesIndex = document.querySelector('[data-scroll-index]');
 
 const modules = {
   placas: {
@@ -38,38 +40,43 @@ const modules = {
 const salesNarrative = [
   {
     kicker: 'Hoy',
-    title: 'Dos sistemas, una sola caja por responder',
-    body: 'Cuando placa, camara, pago, mensualidad y cierre viven separados, el equipo trabaja doble y la administracion ve tarde lo que paso.',
-    proof: 'Palabra clave: visibilidad',
-    metrics: ['Menos digitacion', 'Mas trazabilidad', 'Cierre mas confiable']
+    keyword: 'Visibilidad',
+    title: 'Hoy la operacion funciona, pero obliga a revisar demasiado.',
+    body: 'Cada pantalla separada crea una zona donde la administracion ve tarde lo que paso.',
+    proof: 'De perseguir datos',
+    metrics: ['Conciliable', 'Rastreable', 'Defendible']
   },
   {
     kicker: 'Dinero',
-    title: 'Cada cobro debe tener una historia verificable',
-    body: 'El sistema amarra placa, cajero, turno, medio de pago, anulacion y cierre. Eso vuelve la caja auditable y reduce zonas grises.',
-    proof: 'Palabra clave: control de recaudo',
-    metrics: ['Caja conciliada', 'Alertas de diferencia', 'Comprobante diario']
+    keyword: 'Caja clara',
+    title: 'Cada peso debe tener una historia verificable.',
+    body: 'Placa, cajero, turno, medio de pago, anulacion y cierre quedan conectados para reducir zonas grises.',
+    proof: 'De confianza ciega',
+    metrics: ['Conciliada', 'Alertas', 'Auditable']
   },
   {
     kicker: 'Cliente',
-    title: 'El pago deja de ser una fila y se vuelve una accion rapida',
-    body: 'Con QR o link, el cliente consulta su placa, paga y queda listo para salir. Parkcol se siente mas moderno sin perder control.',
-    proof: 'Palabra clave: pago sin friccion',
-    metrics: ['QR por placa', 'Pago validado', 'Salida autorizada']
+    keyword: 'Sin fila',
+    title: 'El pago deja de ser fila y se vuelve una accion rapida.',
+    body: 'El cliente consulta, paga y sale con validacion automatica. Parkcol se siente moderno sin perder control.',
+    proof: 'De pago manual',
+    metrics: ['QR placa', 'Validado', 'Autorizada']
   },
   {
     kicker: 'Mensualidades',
-    title: 'Los clientes fijos dejan de depender de memoria y papeles',
-    body: 'Vencimientos, placas autorizadas, consecutivos, cartera y regla de una placa activa quedan controlados desde la misma base.',
-    proof: 'Palabra clave: cartera visible',
-    metrics: ['Vencimientos claros', 'Placas controladas', 'Convenios ordenados']
+    keyword: 'Cartera viva',
+    title: 'Los clientes fijos dejan de depender de memoria y papeles.',
+    body: 'Vencimientos, placas autorizadas, consecutivos y regla de una placa activa viven en la misma base.',
+    proof: 'De listas sueltas',
+    metrics: ['Vencidos', 'Placas', 'Convenios']
   },
   {
     kicker: 'Decision',
-    title: 'La propuesta compra tranquilidad operativa',
-    body: 'El dueño puede ver ingresos, egresos, ocupacion, pagos, cierres y alertas sin estar sentado en caja ni persiguiendo reportes.',
-    proof: 'Palabra clave: Parkcol bajo control',
-    metrics: ['Vista movil', 'Operacion unica', 'Menos fuga silenciosa']
+    keyword: 'Control total',
+    title: 'La inversion compra tranquilidad operativa.',
+    body: 'El dueño puede ver ingresos, egresos, ocupacion, pagos, cierres y alertas sin estar sentado en caja.',
+    proof: 'De operar a ciegas',
+    metrics: ['Movil', 'Unico', 'Menos fuga']
   }
 ];
 
@@ -97,8 +104,14 @@ function setSalesStep(index) {
   salesMetricOne.textContent = selected.metrics[0];
   salesMetricTwo.textContent = selected.metrics[1];
   salesMetricThree.textContent = selected.metrics[2];
+  if (salesKeyword) {
+    salesKeyword.textContent = selected.keyword;
+  }
+  if (salesIndex) {
+    salesIndex.textContent = `${String(index + 1).padStart(2, '0')}/${String(salesNarrative.length).padStart(2, '0')}`;
+  }
   if (salesProgress) {
-    salesProgress.style.height = `${((index + 1) / salesNarrative.length) * 100}%`;
+    salesProgress.style.width = `${((index + 1) / salesNarrative.length) * 100}%`;
   }
 }
 
