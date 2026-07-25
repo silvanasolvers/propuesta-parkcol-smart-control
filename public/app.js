@@ -34,6 +34,11 @@ const modules = {
     title: 'Clientes fijos y mensualidades',
     body: 'Administracion de clientes recurrentes, convenios y mensualidades con reglas reales de Parkcol: dos placas registradas por cliente, pero solo una activa dentro del parqueadero al mismo tiempo.',
     points: ['Vencimientos y cartera', 'Consecutivo de pagos mensuales', 'Pico y placa, excepciones y permisos']
+  },
+  crm: {
+    title: 'CRM con datos propios de Parkcol',
+    body: 'Base comercial conectada a placas, frecuencia de visita, historial de pagos, clientes fijos, convenios y cartera. La administracion puede detectar oportunidades, recuperar clientes y vender mensualidades con informacion real de la operacion.',
+    points: ['Segmentos por frecuencia, tipo de cliente y uso', 'Seguimiento de prospectos, cartera y convenios', 'Datos propios para captar mas clientes y aumentar ventas']
   }
 };
 
@@ -71,12 +76,20 @@ const salesNarrative = [
     metrics: ['Vencidos', 'Placas', 'Convenios']
   },
   {
+    kicker: 'CRM',
+    keyword: 'Ventas',
+    title: 'Los datos propios empiezan a trabajar para captar clientes.',
+    body: 'Frecuencia de visita, historial por placa, mensualidades, cartera y convenios revelan a quien llamar, que ofrecer y donde hay venta posible.',
+    proof: 'De datos guardados',
+    metrics: ['Segmentos', 'Campañas', 'Clientes']
+  },
+  {
     kicker: 'Decision',
     keyword: 'Control total',
     title: 'La inversion compra tranquilidad operativa.',
-    body: 'El dueño puede ver ingresos, egresos, ocupacion, pagos, cierres y alertas sin estar sentado en caja.',
+    body: 'El dueño puede ver ingresos, egresos, ocupacion, pagos, cierres, CRM y alertas sin estar sentado en caja.',
     proof: 'De operar a ciegas',
-    metrics: ['Movil', 'Unico', 'Menos fuga']
+    metrics: ['Movil', 'Unico', 'Mas ventas']
   }
 ];
 
@@ -97,7 +110,9 @@ function setSalesStep(index) {
   salesSteps.forEach((step) => {
     step.classList.toggle('active', Number(step.dataset.salesStep) === index);
   });
-  salesKicker.textContent = selected.kicker;
+  if (salesKicker) {
+    salesKicker.textContent = selected.kicker;
+  }
   salesTitle.textContent = selected.title;
   salesBody.textContent = selected.body;
   salesProof.textContent = selected.proof;
